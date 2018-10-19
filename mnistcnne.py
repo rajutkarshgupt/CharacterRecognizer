@@ -25,11 +25,7 @@ fp1 = open('dataset1.pkl', 'r')
 fp2 = open('dataset2.pkl','r')
 
 
-[x_train, y_train],[x_vladation, y_validation], [x_test, y_test] = cPickle.load(fp1)
-[p_train, q_train],[p_vladation, q_validation], [p_test, q_test] = cPickle.load(fp2)
-
-x_train = x_train.extend(p_train)
-y_train = y_train.extend(y_train)
+(x_train, y_train), (x_test, y_test) = mnist.load_data()
 
 if K.image_data_format() == 'channels_first':
     x_train = x_train.reshape(x_train.shape[0], 1, img_rows, img_cols)
