@@ -21,9 +21,6 @@ epochs = 1
 img_rows, img_cols = 28, 28
 
 # the data, shuffled and split between train and test sets
-fp1 = open('dataset1.pkl', 'r')
-fp2 = open('dataset2.pkl','r')
-
 
 (x_train, y_train), (x_test, y_test) = mnist.load_data()
 
